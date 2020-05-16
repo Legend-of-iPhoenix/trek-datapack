@@ -5,3 +5,5 @@ tellraw @a[distance=..500] [{"text":"[","color":"white"},{"text":"Trek","color":
 
 bossbar set trek:shield_a visible false
 bossbar set trek:shield_b visible false
+
+function trek:ranking/calculate_skillpoints

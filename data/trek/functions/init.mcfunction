@@ -8,6 +8,13 @@ tellraw @a[tag=trekDebugActive] [{"text":"[","color":"white"},{"text":"Trek","co
 
 # Per-player variables
 scoreboard objectives add trekDebugTrigger trigger
+scoreboard objectives add trekShop trigger
+scoreboard objectives add trekXP dummy
+scoreboard objectives add trekSkillPtBal dummy
+scoreboard objectives add trekSkillPtTot dummy
+
+# Player skill scores
+scoreboard objectives add trekSklHeal dummy
 
 # General variables
 scoreboard objectives add trekGeneral dummy
