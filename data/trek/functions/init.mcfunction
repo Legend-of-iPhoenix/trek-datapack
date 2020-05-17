@@ -7,6 +7,7 @@
 tellraw @a[tag=trekDebugActive] [{"text":"[","color":"white"},{"text":"Trek","color":"green"},{"text":"] "},{"text":"Initializing Trek PvP Command System","color":"white"}]
 
 # Per-player variables
+scoreboard objectives add trekTeam trigger
 scoreboard objectives add trekDebugTrigger trigger
 
 # General variables
@@ -32,3 +33,6 @@ bossbar set trek:shield_a visible false
 bossbar set trek:shield_b visible false
 
 execute if entity @e[tag=trekShip] run function trek:init/ships_found
+
+tag @a remove trekSelectingShip
+tellraw @s ["",{"text":"Click ","color":"gold"},{"text":"here","bold":true,"color":"white","clickEvent":{"action":"suggest_command","value":"/execute as @e[tag=trekShip] run function trek:select_teams"}},{"text":" to prompt players to select a team.","color":"gold"}]
